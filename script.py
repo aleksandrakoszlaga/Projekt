@@ -96,7 +96,7 @@ def main():
   if args.load_xml:
     data = load_xml(args.load_xml)
   if args.save_xml and data is not None:
-    if isistance(data, ET.Element):
+    if isinstance(data, ET.Element):
       data = {child.tag: child.text for child in data}
     save_xml(data, args.save_xml)
 
